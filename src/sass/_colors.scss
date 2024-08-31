@@ -1,12 +1,105 @@
 /* ------------------- */
 /* Colors              */
 /* ------------------- */
-$clr-hsl-neutral-100: hsl(0, 0%, 100%);
-$clr-hsl-neutral-200: hsl(212, 100%, 95%);
-$clr-hsl-primary-800: hsl(217, 64%, 11%);
-$clr-hsl-primary-700: hsl(218, 58%, 16%);
-$clr-hsl-primary-400: hsl(219, 41%, 23%);
-$clr-hsl-primary-300: hsl(225, 20%, 61%);
-$clr-hsl-primary-100: hsl(226, 70%, 88%);
-$clr-hsl-primary-200: hsl(225, 31%, 74%);
-$clr-hsl-accent-400: hsl(166, 100%, 70%);
+$alpha: 1;
+$clr-hsl-neutral-100: 0 0% 100%;
+$clr-hsl-neutral-200: 212 100% 95%;
+$clr-hsl-primary-800: 217 64% 11%;
+$clr-hsl-primary-700: 218 58% 16%;
+$clr-hsl-primary-400: 219 41% 23%;
+$clr-hsl-primary-300: 225 20% 61%;
+$clr-hsl-primary-100: 226 70% 88%;
+$clr-hsl-primary-200: 225 31% 74%;
+$clr-hsl-accent-400: 166 100% 70%;
+
+@mixin bg-color($color, $alpha: $alpha) {
+  background-color: hsla($color, $alpha);
+}
+@mixin text-color($color, $alpha: $alpha) {
+  color: hsla($color, $alpha);
+}
+
+:root {
+  --alpha: #{$alpha};
+  --clr-neutral-100: hsla(#{$clr-hsl-neutral-100}, var(--alpha));
+  --clr-neutral-200: hsla(#{$clr-hsl-neutral-200}, var(--alpha));
+  --clr-primary-800: hsla(#{$clr-hsl-primary-800}, var(--alpha));
+  --clr-primary-700: hsla(#{$clr-hsl-primary-700}, var(--alpha));
+  --clr-primary-400: hsla(#{$clr-hsl-primary-400}, var(--alpha));
+  --clr-primary-300: hsla(#{$clr-hsl-primary-300}, var(--alpha));
+  --clr-primary-100: hsla(#{$clr-hsl-primary-100}, var(--alpha));
+  --clr-primary-200: hsla(#{$clr-hsl-primary-200}, var(--alpha));
+  --clr-accent-400: hsla(#{$clr-hsl-accent-400}, var(--alpha));
+}
+
+.bg-neutral-100 {
+  @include bg-color($clr-hsl-neutral-100);
+}
+
+.bg-neutral-200 {
+  @include bg-color($clr-hsl-neutral-200);
+}
+
+.bg-primary-800 {
+  @include bg-color($clr-hsl-primary-800);
+}
+
+.bg-primary-700 {
+  @include bg-color($clr-hsl-primary-700);
+}
+
+.bg-primary-400 {
+  @include bg-color($clr-hsl-primary-400);
+}
+
+.bg-primary-300 {
+  @include bg-color($clr-hsl-primary-300);
+}
+
+.bg-primary-100 {
+  @include bg-color($clr-hsl-primary-100);
+}
+
+.bg-primary-200 {
+  @include bg-color($clr-hsl-primary-200);
+}
+
+.bg-accent-400 {
+  @include bg-color($clr-hsl-accent-400);
+}
+
+.text-neutral-100 {
+  @include text-color($clr-hsl-neutral-100);
+}
+
+.text-neutral-200 {
+  @include text-color($clr-hsl-neutral-200);
+}
+
+.text-primary-800 {
+  @include text-color($clr-hsl-primary-800);
+}
+
+.text-primary-700 {
+  @include text-color($clr-hsl-primary-700);
+}
+
+.text-primary-400 {
+  @include text-color($clr-hsl-primary-400);
+}
+
+.text-primary-300 {
+  @include text-color($clr-hsl-primary-300);
+}
+
+.text-primary-100 {
+  @include text-color($clr-hsl-primary-100);
+}
+
+.text-primary-200 {
+  @include text-color($clr-hsl-primary-200);
+}
+
+.text-accent-400 {
+  @include text-color($clr-hsl-accent-400);
+}
