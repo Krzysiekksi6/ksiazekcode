@@ -1,7 +1,10 @@
+@use './colors' as *;
+@use './typography' as *;
+
 .btn {
   padding: 1em 3em;
   background: none;
-  color: $clr-accent-400;
+  color: $clr-hsl-accent-400;
   font-size: $fs-200;
   border: 1px solid currentColor;
   border-radius: 3px;
@@ -18,7 +21,7 @@
     bottom: 0;
     height: 100vh;
     width: min(75vw, 400px);
-    background-color: $clr-primary-700;
+    background-color: $clr-hsl-primary-700;
     .list {
       display: flex;
       justify-content: space-evenly;

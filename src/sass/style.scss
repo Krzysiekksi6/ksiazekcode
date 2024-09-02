@@ -9,11 +9,11 @@ html {
 }
 
 body {
-  color: $clr-primary-300;
+  color: $clr-hsl-primary-300;
   font-family: $ff-base;
   font-size: $fs-400;
   font-weight: $fw-regular;
-  background-color: $clr-primary-800;
+  background-color: $clr-hsl-primary-800;
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
@@ -21,6 +21,5 @@ body {
 
 a {
   text-decoration: none;
-  color: $clr-primary-100;
+  color: $clr-hsl-primary-100;
 }
-

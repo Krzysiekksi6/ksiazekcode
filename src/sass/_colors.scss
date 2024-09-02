@@ -13,10 +13,17 @@ $clr-hsl-primary-200: 225 31% 74%;
 $clr-hsl-accent-400: 166 100% 70%;
 
 @mixin bg-color($color, $alpha: $alpha) {
-  background-color: hsla($color, $alpha);
+  $hue: nth($color, 1);
+  $saturation: nth($color, 2);
+  $lightness: nth($color, 3);
+  background-color: hsla($hue, $saturation, $lightness, $alpha);
 }
+
 @mixin text-color($color, $alpha: $alpha) {
-  color: hsla($color, $alpha);
+  $hue: nth($color, 1);
+  $saturation: nth($color, 2);
+  $lightness: nth($color, 3);
+  color: hsla($hue, $saturation, $lightness, $alpha);
 }
 
 :root {
