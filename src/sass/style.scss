@@ -9,17 +9,13 @@ html {
 }
 
 body {
-  color: $clr-hsl-primary-300;
+  display: grid;
+  color: hsla($clr-hsl-primary-300);
   font-family: $ff-base;
   font-size: $fs-400;
   font-weight: $fw-regular;
-  background-color: $clr-hsl-primary-800;
+  background-color: hsla($clr-hsl-primary-800);
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: $clr-hsl-primary-100;
 }

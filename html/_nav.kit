@@ -1,27 +1,15 @@
-<nav class="nav">
-  <!-- NAV MOBILE -->
-  <button>burger</button>
-  <aside class="nav__aside">
-    <ul class="list">
-      <li class="list__item">
-        <a href="#"><span class="text-accent">01.</span>About</a>
-      </li>
-
-      <li class="list__item">
-        <a href="#"><span class="text-accent">02.</span>Experience</a>
-      </li>
-
-      <li class="list__item">
-        <a href="#"><span class="text-accent">03.</span>Work</a>
-      </li>
-
-      <li class="list__item">
-        <a href="#"><span class="text-accent">04.</span>Contact</a>
-      </li>
-      <li class="list__item">
-        <button class="btn">Resume</button>
-      </li>
-    </ul>
-  </aside>
-  <!-- NAV DESKTOP -->
-</nav>
+<header class="primary-header flex">
+  <div>
+    <img class="logo" src="dist/img/logo_medium.svg" alt="ksiazekCode logo" />
+  </div>
+  <button
+    id="mobile-nav-toggle"
+    class="mobile-nav-toggle"
+    aria-controls="primary-navigation"
+  >
+    <span class="sr-only" aria-expanded="false">Menu</span>
+  </button>
+  <nav>
+    <ul id="primary-navigation" class="primary-navigation flex"></ul>
+  </nav>
+</header>
