@@ -6,10 +6,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 2.5rem;
 }
 
 body {
   display: grid;
+  grid-template-rows: min-content 1fr;
   color: hsla($clr-hsl-primary-300);
   font-family: $ff-base;
   font-size: $fs-400;
@@ -22,4 +24,5 @@ body {
 
 .blur-bg {
   filter: blur(5px) brightness(0.7);
+  transition: 500ms ease-in-out;
 }

@@ -3,19 +3,22 @@
 
 $border-radius: 4px;
 
-.btn,
-a.btn {
+.btn {
   padding: 1rem 2rem;
   background: transparent;
   border: 1px solid hsl($clr-hsl-accent-400);
   border-radius: $border-radius;
   color: hsl($clr-hsl-accent-400) !important;
+  text-decoration: none;
   cursor: pointer;
+  a {
+    text-decoration: none;
+  }
 }
 
 .mobile-nav-toggle {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 1.65rem;
   right: 1.5rem;
   background: transparent;
@@ -52,14 +55,12 @@ a.btn {
 
   a {
     text-decoration: none;
-    color: hsl($clr-hsl-primary-100);
     font-size: 1.25rem;
 
     span {
       font-size: 1rem;
       display: block;
       color: hsl($clr-hsl-accent-400);
-      // font-family: ;
     }
   }
 }
@@ -67,3 +68,61 @@ a.btn {
 .primary-navigation[data-visible='true'] {
   transform: translateX(0);
 }
+
+.main {
+  display: block;
+  /* Jeśli chcesz, aby main miał stałą wysokość: */
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  
+  p:not([class]) {
+    max-width: 35ch;
+    line-height: 1.75rem;
+  }
+}
+
+.about-me {
+  min-height: 90vh;
+  padding: 4rem 2rem 0;
+  h1 {
+    font-size: 20px;
+    color: hsl($clr-hsl-accent-400);
+  }
+
+  h2 {
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  // .about-me {
+  //   &__resume {
+  //     margin-block: 2.5rem;
+  //   }
+  // }
+}
+// .main-content {
+//   .section {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 2rem;
+//
+//   }
+
+//   .about-me2 {
+//     // height: 100vh;
+//   }
+// }
