@@ -16,62 +16,9 @@ $border-radius: 4px;
   }
 }
 
-.mobile-nav-toggle {
-  display: block;
-  position: fixed;
-  top: 1.65rem;
-  right: 1.5rem;
-  background: transparent;
-  border: 0;
-  background-image: url('../img/icon-hamburger.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1.5rem;
-  aspect-ratio: 1;
-  cursor: pointer;
-  transition: 0.3s;
-  z-index: 101;
-}
-
-.mobile-nav-toggle[aria-expanded='true'] {
-  background-image: url('../img/icon-close.svg');
-}
-
-.primary-navigation {
-  --underline-gap: 0.5rem;
-  position: fixed;
-  inset: 0 0 0 30%;
-  flex-direction: column;
-  justify-content: space-evenly;
+.primary-header {
+  justify-content: space-between;
   align-items: center;
-  list-style: none;
-  padding: min(20rem, 15vh) 2rem;
-  margin: 0;
-  transform: translateX(100%);
-  transition: transform 500ms ease-in-out;
-  z-index: 100;
-  background-color: hsl($clr-hsl-primary-700);
-  text-align: center;
-
-  a {
-    text-decoration: none;
-    font-size: 1.25rem;
-
-    span {
-      font-size: 1rem;
-      display: block;
-      color: hsl($clr-hsl-accent-400);
-    }
-  }
-}
-
-.primary-navigation[data-visible='true'] {
-  transform: translateX(0);
-}
-
-.main {
-  display: block;
-  /* Jeśli chcesz, aby main miał stałą wysokość: */
 }
 
 section {
@@ -79,16 +26,31 @@ section {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
-  
+
   p:not([class]) {
     max-width: 35ch;
     line-height: 1.75rem;
   }
 }
 
+.primary-navigation {
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: hsl(var(--clr-dark) / 0.95);
+
+  a {
+    text-decoration: none;
+  }
+}
+
 .about-me {
   min-height: 90vh;
   padding: 4rem 2rem 0;
+  --flow-space: 1.25rem;
+
   h1 {
     font-size: 20px;
     color: hsl($clr-hsl-accent-400);
@@ -107,22 +69,141 @@ section {
   p {
     font-size: 16px;
   }
-
-  // .about-me {
-  //   &__resume {
-  //     margin-block: 2.5rem;
-  //   }
-  // }
 }
-// .main-content {
-//   .section {
-//     display: flex;
-//     flex-direction: column;
-//     padding: 2rem;
-//
-//   }
 
-//   .about-me2 {
-//     // height: 100vh;
-//   }
-// }
+@media (min-width: 576px) {
+  section {
+    p:not([class]) {
+      max-width: 50ch;
+    }
+  }
+  .about-me {
+    --flow-space: 1.55rem;
+  }
+}
+
+@media (min-width: 660px) {
+  section {
+    p:not([class]) {
+      max-width: 55ch;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-navigation {
+    --underline-gap: 0.5rem;
+    position: fixed;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+    background-color: hsl($clr-hsl-primary-700);
+    text-align: center;
+    z-index: 100;
+
+    a {
+      text-decoration: none;
+      font-size: 1.25rem;
+
+      span {
+        font-size: 1rem;
+        display: block;
+        color: hsl($clr-hsl-accent-400);
+      }
+    }
+  }
+
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    top: 1.65rem;
+    right: 1.5rem;
+    background: transparent;
+    border: 0;
+    background-image: url('../img/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 101;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] {
+    background-image: url('../img/icon-close.svg');
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  .primary-navigation {
+    flex-direction: row;
+    padding-inline: clamp(3rem, 7vw, 7rem);
+    align-items: center;
+    margin-block: 1rem;
+    font-size: 16px;
+  }
+
+  .about-me {
+    --flow-space: 0rem;
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 61.52px;
+    }
+    h3 {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+
+    div:nth-child(4) {
+      padding-top: 1rem;
+    }
+    p {
+      font-size: 20px;
+    }
+
+    &__resume {
+      margin-top: 2rem;
+
+      .btn {
+        font-size: 20px;
+      }
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  .nav-btn {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    margin: 1rem 0 0 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    margin-left: 2.5rem;
+  }
+}

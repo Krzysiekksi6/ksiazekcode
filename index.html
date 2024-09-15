@@ -16,7 +16,10 @@
   <body>
     <header class="primary-header flex">
   <div>
-    <img class="logo" src="dist/img/logo_medium.svg" alt="ksiazekCode logo" />
+    <picture>
+      <source media="(min-width: 992px)" srcset="dist/img/logo_big.svg" />
+      <img class="logo" src="dist/img/logo_medium.svg" alt="ksiazekCode logo" />
+    </picture>
   </div>
   <button
     id="mobile-nav-toggle"
@@ -32,19 +35,19 @@
       data-visible="false"
     >
       <li>
-        <a href="#about-me"> <span>01.</span>O mnie </a>
+        <a href="#about-me"> <span class="text-accent-400">01.</span>O mnie </a>
       </li>
       <li>
-        <a href="#work"> <span>02.</span>Praca </a>
+        <a href="#work"> <span class="text-accent-400">02.</span>Praca </a>
       </li>
       <li>
-        <a href="#"> <span>03.</span>Wykształcenie </a>
+        <a href="#"> <span class="text-accent-400">03.</span>Wykształcenie </a>
       </li>
       <li>
-        <a href="#"> <span>04.</span>Kontakt </a>
+        <a href="#"> <span class="text-accent-400">04.</span>Kontakt </a>
       </li>
       <li>
-        <button class="btn">
+        <button class="btn nav-btn">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -57,12 +60,8 @@
   </nav>
 </header>
 
-    <main id="main" class="main">
-      <section
-        id="about-me"
-        class="about-me flow"
-        style="--flow-space: 1.25rem"
-      >
+    <main id="main" class="main container">
+      <section id="about-me" class="about-me flow">
         <div>
           <h1 class="text-accent-400">Cześć, nazywam się</h1>
         </div>
@@ -95,84 +94,13 @@
               target="_blank"
               rel="noopener noreferrer"
               href="dist/img/resume.pdf"
+              class="text-accent-400"
               >Sprawdź moje CV!</a
             >
           </button>
         </div>
       </section>
-
-      <!--  -->
-
-      <section id="work" class="section">
-        <div>
-          <h1 class="text-accent-400">Cześć, nazywam się</h1>
-        </div>
-        <div>
-          <h2 class="text-neutral-100 big-heading">Krzysztof Książek.</h2>
-        </div>
-        <div>
-          <h3 class="text-primary-200">
-            Tworzę oprogramowanie dla stron i aplikacji internetowych.
-          </h3>
-        </div>
-        <div>
-          <p>
-            Jestem absolwentem Informatyki zes pecjalizacją w Inżynierii
-            Oprogramowania. Obecnie pracuję nas tanowisku Specjalisty WMS.
-            Posiadam doświadczenie w pracy z technologiami webowymi i bazami
-            danych.
-            <!-- <a href="" target="_blank" rel="noreferrer">Upstatement</a>. -->
-          </p>
-        </div>
-        <div class="about-me__resume">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="dist/img/resume.pdf"
-            class="btn"
-            >Sprawdź moje CV</a
-          >
-        </div>
-      </section>
-
-      <!--  -->
-
-      <section class="section about-me2">
-        <div>
-          <h1 class="text-accent-400">Cześć, nazywam się</h1>
-        </div>
-        <div>
-          <h2 class="text-neutral-100 big-heading">Krzysztof Książek.</h2>
-        </div>
-        <div>
-          <h3 class="text-primary-200">
-            Tworzę oprogramowanie dla stron i aplikacji internetowych.
-          </h3>
-        </div>
-        <div>
-          <p>
-            Jestem absolwentem Informatyki zes pecjalizacją w Inżynierii
-            Oprogramowania. Obecnie pracuję nas tanowisku Specjalisty WMS.
-            Posiadam doświadczenie w pracy z technologiami webowymi i bazami
-            danych.
-            <!-- <a href="" target="_blank" rel="noreferrer">Upstatement</a>. -->
-          </p>
-        </div>
-        <div class="about-me__resume">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="./img/resume.pdf"
-            class="btn"
-            >Pobierz moje CV</a
-          >
-        </div>
-      </section>
     </main>
-    <footer>
-  <p>123</p>
-</footer>
-
     <script src="dist/js/main.min.js"></script>
   </body>
 </html>

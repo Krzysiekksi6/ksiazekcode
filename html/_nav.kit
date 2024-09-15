@@ -1,6 +1,9 @@
 <header class="primary-header flex">
   <div>
-    <img class="logo" src="dist/img/logo_medium.svg" alt="ksiazekCode logo" />
+    <picture>
+      <source media="(min-width: 992px)" srcset="dist/img/logo_big.svg" />
+      <img class="logo" src="dist/img/logo_medium.svg" alt="ksiazekCode logo" />
+    </picture>
   </div>
   <button
     id="mobile-nav-toggle"
@@ -16,19 +19,19 @@
       data-visible="false"
     >
       <li>
-        <a href="#about-me"> <span>01.</span>O mnie </a>
+        <a href="#about-me"> <span class="text-accent-400">01.</span>O mnie </a>
       </li>
       <li>
-        <a href="#work"> <span>02.</span>Praca </a>
+        <a href="#work"> <span class="text-accent-400">02.</span>Praca </a>
       </li>
       <li>
-        <a href="#"> <span>03.</span>Wykształcenie </a>
+        <a href="#"> <span class="text-accent-400">03.</span>Wykształcenie </a>
       </li>
       <li>
-        <a href="#"> <span>04.</span>Kontakt </a>
+        <a href="#"> <span class="text-accent-400">04.</span>Kontakt </a>
       </li>
       <li>
-        <button class="btn">
+        <button class="btn nav-btn">
           <a
             target="_blank"
             rel="noopener noreferrer"
